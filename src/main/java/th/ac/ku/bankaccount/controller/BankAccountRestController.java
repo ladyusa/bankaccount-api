@@ -38,8 +38,8 @@ public class BankAccountRestController {
 
     @PostMapping
     public BankAccount create(@RequestBody BankAccount bankAccount) {
-        repository.save(bankAccount);
-        return bankAccount;
+        BankAccount record = repository.save(bankAccount);
+        return record;
     }
 
     @PutMapping("/{id}")
